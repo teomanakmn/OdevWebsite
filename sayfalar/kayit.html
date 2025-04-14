@@ -4,56 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toyota Türkiye - Kayıt Ol</title>
-    <style>
-        body {
-            text-align: center;
-            margin: 0 auto;
-            max-width: 1200px;
-            padding: 20px;
-            font-family: Arial, sans-serif;
-        }
-        img {
-            display: block;
-            margin: 0 auto;
-            max-width: 100%;
-            height: auto;
-        }
-        h1, h2, h3, h4, p {
-            text-align: center;
-        }
-        a {
-            text-decoration: none;
-            color: #E50000; /* Toyota red color */
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/styles.css">
     <script>
         // URL'den parametreleri okuma fonksiyonu
-        function getUrlParams() {
-            const params = new URLSearchParams(window.location.search);
+        function getUrl() {
+            const bilgi = new URLSearchParams(window.location.search);
             return {
-                tcno: params.get('tcno'),
-                ad: params.get('ad'),
-                soyad: params.get('soyad'),
-                dogumTarihi: params.get('dogumTarihi'),
-                telefon: params.get('telefon'),
-                cinsiyet: params.get('cinsiyet'),
-                email: params.get('email'),
-                adres: params.get('adres'),
-                password: params.get('password')
+                tcno: bilgi.get('tcno'),
+                ad: bilgi.get('ad'),
+                soyad: bilgi.get('soyad'),
+                dogumTarihi: bilgi.get('dogumTarihi'),
+                telefon: bilgi.get('telefon'),
+                cinsiyet: bilgi.get('cinsiyet'),
+                email: bilgi.get('email'),
+                adres: bilgi.get('adres'),
+                password: bilgi.get('password')
             };
         }
 
         // Sayfa yüklendiğinde çalışacak fonksiyon
         window.onload = function() {
-            const params = getUrlParams();
+            const bilgi = getUrl();
             
             // Eğer kullanıcı adı parametresi varsa hoş geldin mesajı göster
-            if (params.username) {
+            if (bilgi.ad) {
                 const welcomeDiv = document.getElementById('welcome-message');
-                welcomeDiv.innerHTML = '<h2>Hoş geldin ' + params.username + '!</h2>';
+                welcomeDiv.innerHTML = '<h2>Hoş geldin ' + bilgi.ad + '!</h2>';
                 welcomeDiv.style.display = 'block';
             }
         };
@@ -68,10 +44,10 @@
     <h1>Toyota Türkiye - Kayıt Ol</h1>
     <img src="../resimler/logo.png" alt="Toyota Logo" width="200">
     
-    <!-- Hoş geldin mesajı için div (başlangıçta gizli) -->
+    
     <div id="welcome-message" style="display: none;"></div>
     
-    <!-- Kayıt formu -->
+    <!-- Kayıt formum -->
     <div id="registration-form">
         <h2>Yeni Hesap Oluştur</h2>
         <form action="profil.html" method="get">

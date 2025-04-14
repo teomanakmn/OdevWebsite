@@ -1,0 +1,78 @@
+/* Toyota Website External CSS */
+
+body {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3, h4, p {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #E50000; /* Toyota kırmızı renk */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Register buton */
+.register-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #E50000;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+.register-btn:hover {
+    background-color: #C40000;
+    text-decoration: none;
+}
+
+/* karsilastirma.html */
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.comparison-table th, .comparison-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.comparison-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.comparison-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Responsive tasarım*/
+@media screen and (max-width: 600px) {
+    .comparison-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
