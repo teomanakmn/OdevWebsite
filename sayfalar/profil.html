@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toyota Türkiye - Profil</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+        h1, h2, h3, h4, p {
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            color: #E50000; /* Toyota kırmızı renk */
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        // URL'den parametreleri okuma fonksiyonu
+        function getUrlParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                tcno: params.get('tcno'),
+                ad: params.get('ad'),
+                soyad: params.get('soyad'),
+                dogumTarihi: params.get('dogumTarihi'),
+                telefon: params.get('telefon'),
+                cinsiyet: params.get('cinsiyet'),
+                email: params.get('email'),
+                adres: params.get('adres'),
+                password: params.get('password')
+            };
+        }
+
+        // Sayfa yüklendiğinde çalışacak fonksiyon
+        window.onload = function() {
+            const params = getUrlParams();
+            
+            // Kullanıcı bilgilerini göster
+            if (params.ad && params.soyad) {
+                document.getElementById('welcome-message').innerHTML = '<h2>Hoş geldin ' + params.ad + ' ' + params.soyad + '!</h2>';
+                document.getElementById('user-info').innerHTML = `
+                    <h3>Profil Bilgileri</h3>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li><strong>T.C. Kimlik No:</strong> ${params.tcno}</li>
+                        <li><strong>Ad:</strong> ${params.ad}</li>
+                        <li><strong>Soyad:</strong> ${params.soyad}</li>
+                        <li><strong>Doğum Tarihi:</strong> ${params.dogumTarihi}</li>
+                        <li><strong>Telefon No:</strong> ${params.telefon}</li>
+                        <li><strong>Cinsiyet:</strong> ${params.cinsiyet}</li>
+                        <li><strong>E-posta:</strong> ${params.email}</li>
+                        <li><strong>Adres:</strong> ${params.adres}</li>
+                        <li><strong>Şifre:</strong> ${'*'.repeat(params.password ? params.password.length : 0)}</li>
+                    </ul>
+                `;
+            } else {
+                // Eğer parametreler yoksa kullanıcıyı kayıt sayfasına yönlendir
+                document.getElementById('welcome-message').innerHTML = '<h2>Profil bilgisi bulunamadı!</h2>';
+                document.getElementById('user-info').innerHTML = '<p>Lütfen önce <a href="kayit.html">kayıt olun</a>.</p>';
+            }
+        };
+    </script>
+</head>
+<body>
+    <h3><a href="../index.html">Ana Sayfa</a></h3>
+    <a href="hilux.html">Toyota Hilux</a>
+    <a href="rav4.html">Toyota RAV4</a>
+    <a href="corolla.html">Toyota Corolla</a>
+    
+    <h1>Toyota Türkiye - Profil Sayfası</h1>
+    <img src="../resimler/logo.png" alt="Toyota Logo" width="200">
+    
+    <!-- Hoş geldin mesajı -->
+    <div id="welcome-message"></div>
+    
+    <!-- Kullanıcı bilgileri -->
+    <div id="user-info"></div>
+    
+    <!-- Ana sayfaya dön butonu -->
+    <div>
+        <button onclick="window.location.href='../index.html'">Ana Sayfaya Dön</button>
+    </div>
+    
+    <br>
+    <h3><p>Toyota ailesine katıldığınız için teşekkür ederiz!</p></h3>
+    <img src="../resimler/Showroom.jpg" alt="Toyota Showroom" width="600">
+</body>
+</html>
