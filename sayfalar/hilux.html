@@ -7,31 +7,125 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    
-    <h3><a href="../index.html">Ana Sayfa</a></h3>
-    <a href="rav4.html">Toyota RAV4</a>
-    <a href="corolla.html">Toyota Corolla</a>
-    
-    <h1>Toyota Hilux</h1>
-    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="../resimler/toyota-yazı-ile.jpg" alt="Toyota Logo" class="nav-logo">
+        </div>
+        <ul class="nav-menu">
+            <li><a href="../index.html" class="nav-link">Ana Sayfa</a></li>
+            <li class="dropdown">
+                <a href="#" class="nav-link active">Modeller</a>
+                <ul class="dropdown-menu">
+                    <li><a href="hilux.html">Hilux</a></li>
+                    <li><a href="rav4.html">RAV4</a></li>
+                    <li><a href="corolla.html">Corolla</a></li>
+                    <li><a href="landcruiser.html">Land Cruiser</a></li>
+                </ul>
+            </li>
+            <li><a href="karsilastirma.html" class="nav-link">Karşılaştırma</a></li>
+            <li><a href="hakkimizda.html" class="nav-link">Hakkımızda</a></li>
+            <li><a href="kayit.html" class="nav-button">Kayıt Ol</a></li>
+        </ul>
+    </nav>
 
-    <h2>Toyota Hilux Özellikleri</h2>
-    <img src="../resimler/hilux.jpeg" alt="Toyota Hilux">
-    <br>
-    <h2>Öne Çıkan Özellikler</h2>
-    <h4>2.4L dizel motor</h4>
-    <h4>6 ileri otomatik şanzıman seçeneği</h4>
-    <h4>Gelişmiş 4x4 sistemi</h4>
-    <h4>Toyota Safety Sense</h4>
-    <h4>8 inç dokunmatik ekran</h4>
-    <h4>Apple CarPlay ve Android Auto desteği</h4>
+    <main class="model-detail">
+        <!-- Model Başlık -->
+        <section class="model-header">
+            <h1>Toyota Hilux</h1>
+            <p class="model-slogan">Gücün ve Dayanıklılığın Simgesi</p>
+        </section>
 
-    <h3><p>Toyota Hilux, dayanıklılığı ve güvenilirliği ile dünya çapında tanınan bir pick-up modelidir. Zorlu arazi koşullarında bile üstün performans sunar.</p></h3>
-    
-    <h2>İç Tasarım</h2>
-    <img src="../resimler/hilux-ic.jpeg" alt="Toyota Hilux İç Mekan">
-    <h3><p>Modern ve konforlu iç mekanı ile Hilux, iş ve günlük kullanım için ideal bir seçenektir. Geniş kabini ve kaliteli malzemeleriyle dikkat çeker.</p></h3>
+        <!-- Model Görselleri -->
+        <section class="model-gallery">
+            <div class="main-image">
+                <img src="../resimler/hilux.jpeg" alt="Toyota Hilux Dış Görünüm">
+            </div>
+            <div class="secondary-image">
+                <img src="../resimler/hilux-ic.jpeg" alt="Toyota Hilux İç Mekan">
+            </div>
+        </section>
 
-       
+        <!-- Özellikler -->
+        <section class="model-features">
+            <h2>Öne Çıkan Özellikler</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <span class="feature-icon">💪</span>
+                    <h3>Güçlü Motor</h3>
+                    <p>2.4L dizel motor, 150 PS güç</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🛡️</span>
+                    <h3>Sağlam Yapı</h3>
+                    <p>Dayanıklı şasi ve yüksek yerden açıklık</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🎯</span>
+                    <h3>4x4 Sistem</h3>
+                    <p>Zorlu arazi şartlarında üstün performans</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🛋️</span>
+                    <h3>Konforlu Kabin</h3>
+                    <p>Geniş iç hacim ve kaliteli malzemeler</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teknik Özellikler -->
+        <section class="model-specs">
+            <h2>Teknik Özellikler</h2>
+            <div class="specs-grid">
+                <div class="spec-group">
+                    <h3>Motor</h3>
+                    <ul>
+                        <li>2.4L Dizel Motor</li>
+                        <li>150 PS Güç</li>
+                        <li>400 Nm Tork</li>
+                        <li>6 İleri Manuel/Otomatik</li>
+                    </ul>
+                </div>
+                <div class="spec-group">
+                    <h3>Performans</h3>
+                    <ul>
+                        <li>0-100 km/s: 13.2 sn</li>
+                        <li>Maksimum Hız: 170 km/s</li>
+                        <li>Yakıt Tüketimi: 7.8L/100km</li>
+                    </ul>
+                </div>
+                <div class="spec-group">
+                    <h3>Boyutlar</h3>
+                    <ul>
+                        <li>Uzunluk: 5325 mm</li>
+                        <li>Genişlik: 1855 mm</li>
+                        <li>Yükseklik: 1815 mm</li>
+                        <li>Kasa Hacmi: 1525L</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="modern-footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>İletişim</h3>
+                <p>📍 Toyota Plaza, Ataşehir/İstanbul</p>
+                <p>📞 0850 200 0 869</p>
+                <p>✉️ info@toyota.com.tr</p>
+            </div>
+            <div class="social-media">
+                <a href="https://www.facebook.com/ToyotaTurkiye" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/toyota_turkiye/" target="_blank">Instagram</a>
+                <a href="https://x.com/Toyota_Turkiye" target="_blank">X</a>
+                <a href="https://www.youtube.com/user/ToyotaTurkiye" target="_blank">YouTube</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2025 Toyota Türkiye. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
 </body>
 </html>

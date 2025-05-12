@@ -3,89 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toyota Modelleri Karşılaştırma</title>
+    <title>Toyota Model Karşılaştırma</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <h3><a href="../index.html">Ana Sayfa</a></h3>
-    <a href="hilux.html">Toyota Hilux</a>
-    <a href="rav4.html">Toyota RAV4</a>
-    <a href="corolla.html">Toyota Corolla</a>
-    
-    <h1>Toyota Modelleri Karşılaştırma</h1>
-    
-    <table class="comparison-table">
-        <thead>
-            <tr>
-                <th>Özellikler</th>
-                <th>Corolla</th>
-                <th>RAV4</th>
-                <th>Hilux</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Model Adı</td>
-                <td>Corolla</td>
-                <td>RAV4</td>
-                <td>Hilux</td>
-            </tr>
-            <tr>
-                <td>Motor Tipi</td>
-                <td>1.8L Hibrit</td>
-                <td>2.5L Hibrit</td>
-                <td>2.4L Dizel</td>
-            </tr>
-            <tr>
-                <td>Beygir Gücü</td>
-                <td>122 HP</td>
-                <td>218 HP</td>
-                <td>150 HP</td>
-            </tr>
-            <tr>
-                <td>Yakıt Türü</td>
-                <td>Benzin/Hibrit</td>
-                <td>Benzin/Hibrit</td>
-                <td>Dizel</td>
-            </tr>
-            <tr>
-                <td>Vites Tipi</td>
-                <td>CVT</td>
-                <td>E-CVT</td>
-                <td>6 İleri Otomatik</td>
-            </tr>
-            <tr>
-                <td>Yakıt Tüketimi (L/100km)</td>
-                <td>4.3</td>
-                <td>5.0</td>
-                <td>7.2</td>
-            </tr>
-            <tr>
-                <td>Bagaj Hacmi (L)</td>
-                <td>361</td>
-                <td>580</td>
-                <td>N/A</td>
-            </tr>
-            <tr>
-                <td>Çekiş Tipi</td>
-                <td>Önden Çekiş</td>
-                <td>4x4</td>
-                <td>4x4</td>
-            </tr>
-            <tr>
-                <td>Başlangıç Fiyatı (TL)</td>
-                <td>1.200.000</td>
-                <td>1.800.000</td>
-                <td>1.500.000</td>
-            </tr>
-        </tbody>
-    </table>
-    
-    <script>
-       
-        document.addEventListener('DOMContentLoaded', function() {
-            
-        });
-    </script>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="../resimler/toyota-yazı-ile.jpg" alt="Toyota Logo" class="nav-logo">
+        </div>
+        <ul class="nav-menu">
+            <li><a href="../index.html" class="nav-link">Ana Sayfa</a></li>
+            <li class="dropdown">
+                <a href="#" class="nav-link">Modeller</a>
+                <ul class="dropdown-menu">
+                    <li><a href="hilux.html">Hilux</a></li>
+                    <li><a href="rav4.html">RAV4</a></li>
+                    <li><a href="corolla.html">Corolla</a></li>
+                </ul>
+            </li>
+            <li><a href="karsilastirma.html" class="nav-link active">Karşılaştırma</a></li>
+            <li><a href="hakkimizda.html" class="nav-link">Hakkımızda</a></li>
+            <li><a href="kayit.html" class="nav-button">Kayıt Ol</a></li>
+        </ul>
+    </nav>
+
+    <main class="compare-page">
+        <h1>Model Karşılaştırma</h1>
+        
+        <!-- Karşılaştırma Tablosu -->
+        <div class="comparison-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Özellikler</th>
+                        <th>Hilux</th>
+                        <th>RAV4</th>
+                        <th>Corolla</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="feature">Motor</td>
+                        <td>2.4L Dizel</td>
+                        <td>2.5L Hibrit</td>
+                        <td>1.8L Hibrit</td>
+                    </tr>
+                    <tr>
+                        <td class="feature">Güç</td>
+                        <td>150 PS</td>
+                        <td>218 PS</td>
+                        <td>122 PS</td>
+                    </tr>
+                    <tr>
+                        <td class="feature">Şanzıman</td>
+                        <td>6 İleri Manuel/Otomatik</td>
+                        <td>e-CVT</td>
+                        <td>e-CVT</td>
+                    </tr>
+                    <tr>
+                        <td class="feature">Yakıt Tüketimi</td>
+                        <td>7.8L/100km</td>
+                        <td>5.6L/100km</td>
+                        <td>4.5L/100km</td>
+                    </tr>
+                    <tr>
+                        <td class="feature">Çekiş</td>
+                        <td>4x4</td>
+                        <td>AWD-i</td>
+                        <td>Önden</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Öne Çıkan Özellikler -->
+        <section class="highlights">
+            <h2>Öne Çıkan Özellikler</h2>
+            <div class="highlight-grid">
+                <div class="highlight-card">
+                    <h3>Hilux</h3>
+                    <ul>
+                        <li>✓ Yüksek yük kapasitesi</li>
+                        <li>✓ Arazi performansı</li>
+                        <li>✓ Dayanıklı şasi</li>
+                        <li>✓ Geniş yük alanı</li>
+                    </ul>
+                </div>
+                <div class="highlight-card">
+                    <h3>RAV4</h3>
+                    <ul>
+                        <li>✓ Hibrit teknoloji</li>
+                        <li>✓ Akıllı 4x4</li>
+                        <li>✓ Yüksek sürüş pozisyonu</li>
+                        <li>✓ Geniş bagaj hacmi</li>
+                    </ul>
+                </div>
+                <div class="highlight-card">
+                    <h3>Corolla</h3>
+                    <ul>
+                        <li>✓ Düşük yakıt tüketimi</li>
+                        <li>✓ Şehir içi manevra</li>
+                        <li>✓ Konforlu süspansiyon</li>
+                        <li>✓ Modern iç mekan</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kullanım Amacına Göre Öneriler -->
+        <section class="recommendations">
+            <h2>Kullanım Amacına Göre Öneriler</h2>
+            <div class="recommendation-grid">
+                <div class="recommendation-card">
+                    <h3>İş/Ticari Kullanım</h3>
+                    <p>Önerilen Model: <strong>Hilux</strong></p>
+                    <p>Yük taşıma kapasitesi ve dayanıklılığı ile ticari kullanıma en uygun seçenek.</p>
+                </div>
+                <div class="recommendation-card">
+                    <h3>Aile Kullanımı</h3>
+                    <p>Önerilen Model: <strong>RAV4</strong></p>
+                    <p>Geniş iç hacmi ve güvenlik özellikleriyle aileler için ideal seçim.</p>
+                </div>
+                <div class="recommendation-card">
+                    <h3>Şehir İçi Kullanım</h3>
+                    <p>Önerilen Model: <strong>Corolla</strong></p>
+                    <p>Ekonomik yakıt tüketimi ve park kolaylığı ile şehir hayatına uygun.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="modern-footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>İletişim</h3>
+                <p>📍 Toyota Plaza, Ataşehir/İstanbul</p>
+                <p>📞 0850 200 0 869</p>
+                <p>✉️ info@toyota.com.tr</p>
+            </div>
+            <div class="social-media">
+                <a href="https://www.facebook.com/ToyotaTurkiye" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/toyota_turkiye/" target="_blank">Instagram</a>
+                <a href="https://x.com/Toyota_Turkiye" target="_blank">X</a>
+                <a href="https://www.youtube.com/user/ToyotaTurkiye" target="_blank">YouTube</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2025 Toyota Türkiye. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
 </body>
 </html>

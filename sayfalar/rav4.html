@@ -7,28 +7,125 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    
-    <h3><a href="../index.html">Ana Sayfa</a></h3>
-        <a href="hilux.html">Toyota Hilux</a>
-        <a href="corolla.html">Toyota Corolla</a>
-    <h1>Toyota RAV4</h1>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="../resimler/toyota-yazı-ile.jpg" alt="Toyota Logo" class="nav-logo">
+        </div>
+        <ul class="nav-menu">
+            <li><a href="../index.html" class="nav-link">Ana Sayfa</a></li>
+            <li class="dropdown">
+                <a href="#" class="nav-link active">Modeller</a>
+                <ul class="dropdown-menu">
+                    <li><a href="hilux.html">Hilux</a></li>
+                    <li><a href="rav4.html">RAV4</a></li>
+                    <li><a href="corolla.html">Corolla</a></li>
+                    <li><a href="landcruiser.html">Land Cruiser</a></li>
+                </ul>
+            </li>
+            <li><a href="karsilastirma.html" class="nav-link">Karşılaştırma</a></li>
+            <li><a href="hakkimizda.html" class="nav-link">Hakkımızda</a></li>
+            <li><a href="kayit.html" class="nav-button">Kayıt Ol</a></li>
+        </ul>
+    </nav>
 
-    <h2>Toyota RAV4 Özellikleri</h2>
-    <img src="../resimler/rav4.jpg" alt="Toyota RAV4">
-    <br>
-    <h2>Öne Çıkan Özellikler</h2>
-        <h4>- 2.5L Hibrit motor</h4>
-        <h4>- E-CVT şanzıman</h4>
-        <h4>- Toyota Safety Sense 2.0</h4>
-        <h4>- Akıllı dört tekerlekten çekiş sistemi</h4>
-        <h4>- 9 inç multimedya ekranı</h4>
-        <h4>- Kablosuz şarj ünitesi</h4>
-    <h3><p>Toyota RAV4, kompakt SUV segmentinin öncüsü ve lideri konumundadır. Hibrit teknolojisi ve çevre dostu yaklaşımıyla dikkat çeker.</p></h3>
-    
-    <h2>İç Tasarım</h2>
-    <img src="../resimler/rav4-ic.jpg" alt="Toyota RAV4 İç Mekan">
-    <h3><p>Geniş bagaj hacmi, yüksek kaliteli malzemeler ve modern teknolojik donanımlarıyla RAV4, konfor ve kullanışlılığı bir arada sunuyor.</p></h3>
+    <main class="model-detail">
+        <!-- Model Başlık -->
+        <section class="model-header">
+            <h1>Toyota RAV4</h1>
+            <p class="model-slogan">Hibrit SUV Deneyimi</p>
+        </section>
 
+        <!-- Model Görselleri -->
+        <section class="model-gallery">
+            <div class="main-image">
+                <img src="../resimler/RAV4.jpg" alt="Toyota RAV4 Dış Görünüm">
+            </div>
+            <div class="secondary-image">
+                <img src="../resimler/rav4-ic.jpg" alt="Toyota RAV4 İç Mekan">
+            </div>
+        </section>
 
+        <!-- Özellikler -->
+        <section class="model-features">
+            <h2>Öne Çıkan Özellikler</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <span class="feature-icon">🌿</span>
+                    <h3>Hibrit Güç</h3>
+                    <p>2.5L hibrit motor, 218 PS güç</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🚙</span>
+                    <h3>AWD-i</h3>
+                    <p>Akıllı dört çeker sistem</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🛡️</span>
+                    <h3>Güvenlik</h3>
+                    <p>Toyota Safety Sense 2.0</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">📱</span>
+                    <h3>Teknoloji</h3>
+                    <p>9 inç multimedya ekranı</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teknik Özellikler -->
+        <section class="model-specs">
+            <h2>Teknik Özellikler</h2>
+            <div class="specs-grid">
+                <div class="spec-group">
+                    <h3>Motor</h3>
+                    <ul>
+                        <li>2.5L Hibrit Motor</li>
+                        <li>218 PS Toplam Güç</li>
+                        <li>221 Nm Tork</li>
+                        <li>e-CVT Şanzıman</li>
+                    </ul>
+                </div>
+                <div class="spec-group">
+                    <h3>Performans</h3>
+                    <ul>
+                        <li>0-100 km/s: 8.1 sn</li>
+                        <li>Maksimum Hız: 180 km/s</li>
+                        <li>Yakıt Tüketimi: 5.6L/100km</li>
+                    </ul>
+                </div>
+                <div class="spec-group">
+                    <h3>Boyutlar</h3>
+                    <ul>
+                        <li>Uzunluk: 4600 mm</li>
+                        <li>Genişlik: 1855 mm</li>
+                        <li>Yükseklik: 1685 mm</li>
+                        <li>Bagaj Hacmi: 580L</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="modern-footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>İletişim</h3>
+                <p>📍 Toyota Plaza, Ataşehir/İstanbul</p>
+                <p>📞 0850 200 0 869</p>
+                <p>✉️ info@toyota.com.tr</p>
+            </div>
+            <div class="social-media">
+                <a href="https://www.facebook.com/ToyotaTurkiye" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/toyota_turkiye/" target="_blank">Instagram</a>
+                <a href="https://x.com/Toyota_Turkiye" target="_blank">X</a>
+                <a href="https://www.youtube.com/user/ToyotaTurkiye" target="_blank">YouTube</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2025 Toyota Türkiye. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
 </body>
 </html>

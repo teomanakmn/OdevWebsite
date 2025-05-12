@@ -3,76 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toyota Türkiye - Profil</title>
+    <title>Toyota - Profilim</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <script>
-        // URL'den parametreleri okuma fonksiyonu budur.
-        function getUrl() {
-            const bilgi = new URLSearchParams(window.location.search);
-            return {
-                tcno: bilgi.get('tcno'),
-                ad: bilgi.get('ad'),
-                soyad: bilgi.get('soyad'),
-                dogumTarihi: bilgi.get('dogumTarihi'),
-                telefon: bilgi.get('telefon'),
-                cinsiyet: bilgi.get('cinsiyet'),
-                email: bilgi.get('email'),
-                adres: bilgi.get('adres'),
-                password: bilgi.get('password')
-            };
-        }
-
-        // Sayfa yüklendiğinde çalışacak fonksiyon budur.
-        window.onload = function() {
-            const bilgi = getUrl();
-            
-            // Kullanıcı bilgilerini gösterme olayı.
-            if (bilgi.ad && bilgi.soyad) {
-                document.getElementById('welcome-message').innerHTML = '<h2>Hoş geldin ' + bilgi.ad + ' ' + bilgi.soyad + '!</h2>';
-                document.getElementById('user-info').innerHTML = `
-                    <h3>Profil Bilgileri</h3>
-                    <ul style="list-style-type: none; padding-left: 0;">
-                        <li><strong>T.C. Kimlik No:</strong> ${bilgi.tcno}</li>
-                        <li><strong>Ad:</strong> ${bilgi.ad}</li>
-                        <li><strong>Soyad:</strong> ${bilgi.soyad}</li>
-                        <li><strong>Doğum Tarihi:</strong> ${bilgi.dogumTarihi}</li>
-                        <li><strong>Telefon No:</strong> ${bilgi.telefon}</li>
-                        <li><strong>Cinsiyet:</strong> ${bilgi.cinsiyet}</li>
-                        <li><strong>E-posta:</strong> ${bilgi.email}</li>
-                        <li><strong>Adres:</strong> ${bilgi.adres}</li>
-                        <li><strong>Şifre:</strong> ${'*'.repeat(bilgi.password ? bilgi.password.length : 0)}</li>
-                    </ul>
-                `;
-            } else {
-                // Eğer parametreler yoksa kullanıcıyı kayıt sayfasına yönlenndirme
-                document.getElementById('welcome-message').innerHTML = '<h2>Profil bilgisi bulunamadı!</h2>';
-                document.getElementById('user-info').innerHTML = '<p>Lütfen önce <a href="kayit.html">kayıt olun</a>.</p>';
-            }
-        };
-    </script>
 </head>
 <body>
-    <h3><a href="../index.html">Ana Sayfa</a></h3>
-    <a href="hilux.html">Toyota Hilux</a>
-    <a href="rav4.html">Toyota RAV4</a>
-    <a href="corolla.html">Toyota Corolla</a>
-    
-    <h1>Toyota Türkiye - Profil Sayfası</h1>
-    <img src="../resimler/logo.png" alt="Toyota Logo" width="200">
-    
-    <!-- Hoş geldin mesajı -->
-    <div id="welcome-message"></div>
-    
-    <!-- Kullanıcı bilgileri -->
-    <div id="user-info"></div>
-    
-    <!-- Ana sayfaya dön butonu -->
-    <div>
-        <button onclick="window.location.href='../index.html'">Ana Sayfaya Dön</button>
-    </div>
-    
-    <br>
-    <h3><p>Toyota ailesine katıldığınız için teşekkür ederiz!</p></h3>
-    <img src="../resimler/Showroom.jpg" alt="Toyota Showroom" width="600">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="../resimler/toyota-yazı-ile.jpg" alt="Toyota Logo" class="nav-logo">
+        </div>
+        <ul class="nav-menu">
+            <li><a href="../index.html" class="nav-link">Ana Sayfa</a></li>
+            <li class="dropdown">
+                <a href="#" class="nav-link">Modeller</a>
+                <ul class="dropdown-menu">
+                    <li><a href="hilux.html">Hilux</a></li>
+                    <li><a href="rav4.html">RAV4</a></li>
+                    <li><a href="corolla.html">Corolla</a></li>
+                </ul>
+            </li>
+            <li><a href="karsilastirma.html" class="nav-link">Karşılaştırma</a></li>
+            <li><a href="#" class="nav-link">Hakkımızda</a></li>
+            <li><a href="#" class="nav-button">Profilim</a></li>
+        </ul>
+    </nav>
+
+    <main class="profile-page">
+        <div class="profile-container">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <img src="../resimler/avatar-placeholder.png" alt="Profil Resmi">
+                </div>
+                <div class="profile-info">
+                    <h1>Hoş Geldiniz</h1>
+                    <p class="member-since">Üyelik: Mayıs 2025</p>
+                </div>
+            </div>
+
+            <div class="profile-content">
+                <div class="profile-section">
+                    <h2>Kişisel Bilgiler</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label>Ad Soyad</label>
+                            <p id="displayName">-</p>
+                        </div>
+                        <div class="info-item">
+                            <label>E-posta</label>
+                            <p id="displayEmail">-</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Telefon</label>
+                            <p id="displayPhone">-</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Şehir</label>
+                            <p id="displayCity">-</p>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="profile-section">
+                    <h2>Favorilerim</h2>
+                    <div class="favorites-grid">
+                        <div class="favorite-car">
+                            <img src="../resimler/Toyota-Corolla.jpg" alt="Toyota Corolla">
+                            <h3>Corolla</h3>
+                            <a href="corolla.html" class="view-details">Detayları Gör</a>
+                        </div>
+                        <div class="favorite-car">
+                            <img src="../resimler/RAV4.jpg" alt="Toyota RAV4">
+                            <h3>RAV4</h3>
+                            <a href="rav4.html" class="view-details">Detayları Gör</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <h2>Son İşlemler</h2>
+                    <ul class="activity-list">
+                        <li>
+                            <span class="activity-date">10.05.2025</span>
+                            <span class="activity-desc">Karşılaştırma sayfasını ziyaret ettiniz</span>
+                        </li>
+                        <li>
+                            <span class="activity-date">10.05.2025</span>
+                            <span class="activity-desc">Hesabınız oluşturuldu</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="modern-footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>İletişim</h3>
+                <p>📍 Toyota Plaza, Ataşehir/İstanbul</p>
+                <p>📞 0850 200 0 869</p>
+                <p>✉️ info@toyota.com.tr</p>
+            </div>
+            <div class="social-media">
+                <a href="https://www.facebook.com/ToyotaTurkiye" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/toyota_turkiye/" target="_blank">Instagram</a>
+                <a href="https://x.com/Toyota_Turkiye" target="_blank">X</a>
+                <a href="https://www.youtube.com/user/ToyotaTurkiye" target="_blank">YouTube</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2025 Toyota Türkiye. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script>
+        // URL'den parametreleri alma
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        // Profil bilgilerini güncelleme
+        document.getElementById('displayName').textContent = urlParams.get('name') || '-';
+        document.getElementById('displayEmail').textContent = urlParams.get('email') || '-';
+        document.getElementById('displayPhone').textContent = urlParams.get('phone') || '-';
+        document.getElementById('displayCity').textContent = urlParams.get('city') || '-';
+    </script>
 </body>
 </html>

@@ -3,109 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toyota Türkiye - Kayıt Ol</title>
+    <title>Toyota - Kayıt Ol</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <script>
-        // URL'den parametreleri okuma fonksiyonu
-        function getUrl() {
-            const bilgi = new URLSearchParams(window.location.search);
-            return {
-                tcno: bilgi.get('tcno'),
-                ad: bilgi.get('ad'),
-                soyad: bilgi.get('soyad'),
-                dogumTarihi: bilgi.get('dogumTarihi'),
-                telefon: bilgi.get('telefon'),
-                cinsiyet: bilgi.get('cinsiyet'),
-                email: bilgi.get('email'),
-                adres: bilgi.get('adres'),
-                password: bilgi.get('password')
-            };
-        }
-
-        // Sayfa yüklendiğinde çalışacak fonksiyon
-        window.onload = function() {
-            const bilgi = getUrl();
-            
-            // Eğer kullanıcı adı parametresi varsa hoş geldin mesajı göster
-            if (bilgi.ad) {
-                const welcomeDiv = document.getElementById('welcome-message');
-                welcomeDiv.innerHTML = '<h2>Hoş geldin ' + bilgi.ad + '!</h2>';
-                welcomeDiv.style.display = 'block';
-            }
-        };
-    </script>
 </head>
 <body>
-    <h3><a href="../index.html">Ana Sayfa</a></h3>
-    <a href="hilux.html">Toyota Hilux</a>
-    <a href="rav4.html">Toyota RAV4</a>
-    <a href="corolla.html">Toyota Corolla</a>
-    
-    <h1>Toyota Türkiye - Kayıt Ol</h1>
-    <img src="../resimler/logo.png" alt="Toyota Logo" width="200">
-    
-    
-    <div id="welcome-message" style="display: none;"></div>
-    
-    <!-- Kayıt formum -->
-    <div id="registration-form">
-        <h2>Yeni Hesap Oluştur</h2>
-        <form action="profil.html" method="get">
-            <div>
-                <label for="tcno">T.C. Kimlik No:</label><br>
-                <input type="text" id="tcno" name="tcno" required maxlength="11" pattern="[0-9]{11}">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="../resimler/toyota-yazı-ile.jpg" alt="Toyota Logo" class="nav-logo">
+        </div>
+        <ul class="nav-menu">
+            <li><a href="../index.html" class="nav-link">Ana Sayfa</a></li>
+            <li class="dropdown">
+                <a href="#" class="nav-link">Modeller</a>
+                <ul class="dropdown-menu">
+                    <li><a href="hilux.html">Hilux</a></li>
+                    <li><a href="rav4.html">RAV4</a></li>
+                    <li><a href="corolla.html">Corolla</a></li>
+                </ul>
+            </li>
+            <li><a href="karsilastirma.html" class="nav-link">Karşılaştırma</a></li>
+            <li><a href="#" class="nav-link">Hakkımızda</a></li>
+            <li><a href="kayit.html" class="nav-button">Kayıt Ol</a></li>
+        </ul>
+    </nav>
+
+    <main class="form-page">
+        <div class="form-container">
+            <h1>Kayıt Ol</h1>
+            <p class="form-desc">Toyota ailesine katılın ve özel fırsatlardan yararlanın.</p>
+            
+            <form class="register-form" action="profil.html" method="get">
+                <div class="form-group">
+                    <label for="name">Ad Soyad</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-posta</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Telefon</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Şifre</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="city">Şehir</label>
+                    <select id="city" name="city" required>
+                        <option value="">Seçiniz</option>
+                        <option value="istanbul">İstanbul</option>
+                        <option value="ankara">Ankara</option>
+                        <option value="izmir">İzmir</option>
+                        <option value="bursa">Bursa</option>
+                    </select>
+                </div>
+                
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">Kullanım koşullarını kabul ediyorum</label>
+                </div>
+                
+                <button type="submit" class="form-button">Kayıt Ol</button>
+            </form>
+            
+            <p class="login-link">Zaten üye misiniz? <a href="#">Giriş yapın</a></p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="modern-footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>İletişim</h3>
+                <p>📍 Toyota Plaza, Ataşehir/İstanbul</p>
+                <p>📞 0850 200 0 869</p>
+                <p>✉️ info@toyota.com.tr</p>
             </div>
-            <br>
-            <div>
-                <label for="ad">Ad:</label><br>
-                <input type="text" id="ad" name="ad" required>
+            <div class="social-media">
+                <a href="https://www.facebook.com/ToyotaTurkiye" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/toyota_turkiye/" target="_blank">Instagram</a>
+                <a href="https://x.com/Toyota_Turkiye" target="_blank">X</a>
+                <a href="https://www.youtube.com/user/ToyotaTurkiye" target="_blank">YouTube</a>
             </div>
-            <br>
-            <div>
-                <label for="soyad">Soyad:</label><br>
-                <input type="text" id="soyad" name="soyad" required>
-            </div>
-            <br>
-            <div>
-                <label for="dogumTarihi">Doğum Tarihi:</label><br>
-                <input type="date" id="dogumTarihi" name="dogumTarihi" required style="padding: 5px; border-radius: 5px; border: 1px solid #ccc;">
-            </div>
-            <br>
-            <div>
-                <label for="telefon">Telefon No:</label><br>
-                <input type="tel" id="telefon" name="telefon" required>
-            </div>
-            <br>
-            <div>
-                <label>Cinsiyet:</label><br>
-                <input type="radio" id="erkek" name="cinsiyet" value="Erkek" required>
-                <label for="erkek">Erkek</label>
-                <input type="radio" id="kadin" name="cinsiyet" value="Kadın">
-                <label for="kadin">Kadın</label>
-            </div>
-            <br>
-            <div>
-                <label for="email">E-posta Adresi:</label><br>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <br>
-            <div>
-                <label for="adres">Adres:</label><br>
-                <textarea id="adres" name="adres" rows="3" required></textarea>
-            </div>
-            <br>
-            <div>
-                <label for="password">Şifre:</label><br>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <br>
-            <div>
-                <input type="submit" value="Kayıt Ol">
-            </div>
-        </form>
-    </div>
-    
-    <h3><p>Toyota ailesine katılarak özel fırsatlardan ve kampanyalardan haberdar olun!</p></h3>
-    <img src="../resimler/Showroom.jpg" alt="Toyota Showroom" width="600">
+        </div>
+        <div class="footer-bottom">
+            <p>2025 Toyota Türkiye. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
 </body>
 </html>

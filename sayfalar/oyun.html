@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toyota - Araba Oyunu</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/game.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="../resimler/toyota-yazı-ile.jpg" alt="Toyota Logo" class="nav-logo">
+        </div>
+        <ul class="nav-menu">
+            <li><a href="../index.html" class="nav-link">Ana Sayfa</a></li>
+            <li class="dropdown">
+                <a href="#" class="nav-link">Modeller</a>
+                <ul class="dropdown-menu">
+                    <li><a href="hilux.html">Hilux</a></li>
+                    <li><a href="rav4.html">RAV4</a></li>
+                    <li><a href="corolla.html">Corolla</a></li>
+                </ul>
+            </li>
+            <li><a href="karsilastirma.html" class="nav-link">Karşılaştırma</a></li>
+            <li><a href="#" class="nav-link">Hakkımızda</a></li>
+            <li><a href="kayit.html" class="nav-button">Kayıt Ol</a></li>
+        </ul>
+    </nav>
+
+    <div class="game-container">
+        <h1>Toyota Sürüş Oyunu</h1>
+        <div class="score">Skor: <span id="scoreText">0</span></div>
+        <canvas id="gameCanvas" width="600" height="400"></canvas>
+        <div class="game-controls">
+            <button id="startButton" class="start-button">Oyunu Başlat</button>
+            <p class="controls-info">
+                Kontroller:<br>
+                ← Sol ok tuşu: Sola git<br>
+                → Sağ ok tuşu: Sağa git
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="modern-footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>İletişim</h3>
+                <p>📍 Toyota Plaza, Ataşehir/İstanbul</p>
+                <p>📞 0850 200 0 869</p>
+                <p>✉️ info@toyota.com.tr</p>
+            </div>
+            <div class="social-media">
+                <a href="https://www.facebook.com/ToyotaTurkiye" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/toyota_turkiye/" target="_blank">Instagram</a>
+                <a href="https://x.com/Toyota_Turkiye" target="_blank">X</a>
+                <a href="https://www.youtube.com/user/ToyotaTurkiye" target="_blank">YouTube</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2025 Toyota Türkiye. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="../js/game.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımızda - Toyota Türkiye</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .about-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .about-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .about-header h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .about-header p {
+            color: #666;
+            font-size: 1.2em;
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .about-item {
+            padding: 20px;
+            background-color: #f8f8f8;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .about-item i {
+            font-size: 2em;
+            color: #E50000;
+            margin-bottom: 15px;
+        }
+        .about-item h2 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+        .about-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+        .about-footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f8f8;
+            border-radius: 10px;
+        }
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="../resimler/toyota-yazı-ile.jpg" alt="Toyota Logo" class="nav-logo">
+        </div>
+        <ul class="nav-menu">
+            <li><a href="../index.html" class="nav-link">Ana Sayfa</a></li>
+            <li class="dropdown">
+                <a href="#" class="nav-link">Modeller</a>
+                <ul class="dropdown-menu">
+                    <li><a href="hilux.html">Hilux</a></li>
+                    <li><a href="rav4.html">RAV4</a></li>
+                    <li><a href="corolla.html">Corolla</a></li>
+                    <li><a href="landcruiser.html">Land Cruiser</a></li>
+                </ul>
+            </li>
+            <li><a href="karsilastirma.html" class="nav-link">Karşılaştırma</a></li>
+            <li><a href="oyun.html" class="nav-link">Oyun</a></li>
+            <li><a href="hakkimizda.html" class="nav-link active">Hakkımızda</a></li>
+            <li><a href="kayit.html" class="nav-button">Kayıt Ol</a></li>
+        </ul>
+    </nav>
+
+    <div class="about-container">
+        <div class="about-header">
+            <h1>Toyota Türkiye</h1>
+            <p>Yenilikçi teknoloji, güvenilir kalite</p>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-item">
+                <i>🌟</i>
+                <h2>Vizyonumuz</h2>
+                <p>Sürdürülebilir mobilite çözümleriyle geleceği şekillendirmek ve herkes için daha iyi bir dünya yaratmak.</p>
+            </div>
+            <div class="about-item">
+                <i>💪</i>
+                <h2>Gücümüz</h2>
+                <p>30 yılı aşkın Türkiye deneyimi ve dünya çapında güvenilen Toyota kalitesi ile hizmetinizdeyiz.</p>
+            </div>
+            <div class="about-item">
+                <i>🌿</i>
+                <h2>Sürdürülebilirlik</h2>
+                <p>Hibrit teknolojimiz ve çevre dostu yaklaşımımızla gelecek nesillere daha temiz bir dünya bırakıyoruz.</p>
+            </div>
+            <div class="about-item">
+                <i>❤️</i>
+                <h2>Müşteri Odaklılık</h2>
+                <p>Müşterilerimizin memnuniyeti ve güveni bizim için her şeyden önemlidir.</p>
+            </div>
+        </div>
+
+        <div class="about-footer">
+            <p>Toyota Türkiye olarak, otomotiv sektöründe lider konumumuzla size en iyi hizmeti sunmaya devam ediyoruz.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="modern-footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>İletişim</h3>
+                <p>📍 Toyota Plaza, Ataşehir/İstanbul</p>
+                <p>📞 0850 200 0 869</p>
+                <p>✉️ info@toyota.com.tr</p>
+            </div>
+            <div class="social-media">
+                <a href="https://www.facebook.com/ToyotaTurkiye" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/toyota_turkiye/" target="_blank">Instagram</a>
+                <a href="https://x.com/Toyota_Turkiye" target="_blank">X</a>
+                <a href="https://www.youtube.com/user/ToyotaTurkiye" target="_blank">YouTube</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2025 Toyota Türkiye. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+</body>
+</html>
